@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Code2, GraduationCap, Heart, Mail, User } from "lucide-react";
+import { Code2, GraduationCap, Heart, Mail, User } from "lucide-react";
 
 export default function Home() {
   return (
@@ -18,14 +18,12 @@ export default function Home() {
           Building clean, performant web applications using Next.js.
         </p>
         <div className="flex flex-wrap justify-center gap-3 pt-2">
-          <Button asChild size="lg">
-            <Link href="/contact">
-              Contact Me
-            </Link>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <Link href="/about">About Me</Link>
-          </Button>
+          <Link href="/contact">
+            <Button size="lg">Contact Me</Button>
+          </Link>
+          <Link href="/about">
+            <Button variant="outline" size="lg">About Me</Button>
+          </Link>
         </div>
       </section>
 
